@@ -1,0 +1,67 @@
+# ==============================================================================
+# Git Ignore - Smart Network Analyzer
+# ==============================================================================
+
+# --- Python & Backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local Environment Variables & Secrets
+.env
+Backend/.env
+*.env.local
+
+# Databases & Runtime State
+*.db
+*.sqlite
+*.sqlite3
+Backend/smart_network.db
+
+# --- Android & Frontend ---
+*.iml
+.gradle/
+Frontend/.gradle/
+local.properties
+Frontend/local.properties
+
+# Android Studio / IntelliJ Project Files
+.idea/
+Frontend/.idea/
+*.ipr
+*.iws
+
+# Gradle & Build Artifacts
+build/
+Frontend/build/
+Frontend/app/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Binary Outputs (APKs / AARs)
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# --- OS & System Files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*~

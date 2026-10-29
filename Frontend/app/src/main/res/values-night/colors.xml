@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Primitive Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Brand Palette (Dark Mode Vibrant Sky & Cyan) -->
+    <color name="primary">#38BDF8</color>
+    <color name="primary_variant">#0284C7</color>
+    <color name="primary_container">#0C243B</color>
+    <color name="on_primary_container">#BAE6FD</color>
+    <color name="secondary">#38BDF8</color>
+    <color name="accent">#00E5FF</color>
+
+    <!-- AI Feature Colors -->
+    <color name="ai_accent">#A78BFA</color>
+    <color name="ai_accent_bg">#281B47</color>
+    
+    <!-- Backgrounds & Surfaces (Dark Mode Deep Obsidian) -->
+    <color name="bg_light">#0A0E17</color>
+    <color name="bg_canvas">#0A0E17</color>
+    <color name="card_surface">#131926</color>
+    <color name="card_surface_elevated">#1A2234</color>
+    <color name="surface_variant">#1C2538</color>
+    <color name="card_stroke">#232F45</color>
+    <color name="card_stroke_subtle">#1A2233</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+
+    <!-- Signal & Health Indicators -->
+    <color name="status_strong">#34D399</color>
+    <color name="status_fair">#FBBF24</color>
+    <color name="status_weak">#F87171</color>
+    <color name="status_info">#38BDF8</color>
+    <color name="status_bg_green">#062E1D</color>
+    <color name="status_bg_amber">#33250A</color>
+    <color name="status_bg_red">#361214</color>
+
+    <color name="success">#34D399</color>
+    <color name="warning">#FBBF24</color>
+    <color name="error">#F87171</color>
+    <color name="danger">#F87171</color>
+    <color name="divider">#1E293B</color>
+    <color name="text_tertiary">#64748B</color>
+    <color name="ai_purple">#A78BFA</color>
+
+    <!-- Navigation Bar Tokens -->
+    <color name="nav_bg">#0F1522</color>
+    <color name="nav_indicator">#162842</color>
+    <color name="nav_active">#38BDF8</color>
+    <color name="nav_inactive">#64748B</color>
+</resources>

@@ -1,0 +1,273 @@
+### Smart Network Analyzer - Complete API Test Requests
+@baseUrl = http://localhost:8000/api/v1
+@contentType = application/json
+
+### 1. Health Check
+GET {{baseUrl}}/health
+
+### 2. User Signup
+# @name signup
+POST {{baseUrl}}/auth/signup
+Content-Type: {{contentType}}
+
+{
+  "name": "Test Engineer",
+  "email": "engineer@example.com",
+  "password": "Password123!"
+}
+
+### 3. User Login
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: {{contentType}}
+
+{
+  "email": "engineer@example.com",
+  "password": "Password123!"
+}
+
+@authToken = {{login.response.body.access_token}}
+@refreshToken = {{login.response.body.refresh_token}}
+
+### 4. Refresh Token
+POST {{baseUrl}}/auth/refresh
+Content-Type: {{contentType}}
+
+{
+  "refresh_token": "{{refreshToken}}"
+}
+
+### 5. Forgot Password
+POST {{baseUrl}}/auth/forgot-password
+Content-Type: {{contentType}}
+
+{
+  "email": "engineer@example.com"
+}
+
+### 6. Get Current User Profile
+GET {{baseUrl}}/users/me
+Authorization: Bearer {{authToken}}
+
+### 7. Update User Profile
+PUT {{baseUrl}}/users/me
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Senior Test Engineer"
+}
+
+### 8. Change Password
+PUT {{baseUrl}}/users/me/password
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "current_password": "Password123!",
+  "new_password": "NewSecretPassword123!"
+}
+
+### 9. Create Wi-Fi Scan
+# @name createWifiScan
+POST {{baseUrl}}/wifi/scans
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "location_label": "Office Desk",
+  "networks": [
+    {
+      "ssid": "CorpHQ_5G",
+      "bssid": "00:11:22:33:44:55",
+      "signal_dbm": -52,
+      "frequency_mhz": 5180,
+      "channel": 36,
+      "security": "WPA3",
+      "is_connected": true
+    },
+    {
+      "ssid": "CorpHQ_Guest",
+      "bssid": "00:11:22:33:44:56",
+      "signal_dbm": -72,
+      "frequency_mhz": 2412,
+      "channel": 1,
+      "security": "OPEN",
+      "is_connected": false
+    }
+  ]
+}
+
+@wifiScanId = {{createWifiScan.response.body.id}}
+
+### 10. List Wi-Fi Scans
+GET {{baseUrl}}/wifi/scans?page=1&page_size=20
+Authorization: Bearer {{authToken}}
+
+### 11. Get Wi-Fi Scan Detail
+GET {{baseUrl}}/wifi/scans/{{wifiScanId}}
+Authorization: Bearer {{authToken}}
+
+### 12. Create Speed Test
+# @name createSpeedTest
+POST {{baseUrl}}/speed-tests
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "download_mbps": 125.5,
+  "upload_mbps": 45.2,
+  "ping_ms": 14.5,
+  "server": "Cloudflare Speed Server",
+  "network_type": "wifi",
+  "ssid": "CorpHQ_5G"
+}
+
+@speedTestId = {{createSpeedTest.response.body.id}}
+
+### 13. Speed Tests Stats
+GET {{baseUrl}}/speed-tests/stats
+Authorization: Bearer {{authToken}}
+
+### 14. List Speed Tests
+GET {{baseUrl}}/speed-tests?page=1&page_size=20
+Authorization: Bearer {{authToken}}
+
+### 15. Create Latency Test
+# @name createLatencyTest
+POST {{baseUrl}}/latency-tests
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "target_host": "8.8.8.8",
+  "avg_ms": 18.2,
+  "min_ms": 14.0,
+  "max_ms": 28.5,
+  "jitter_ms": 2.1,
+  "packet_loss_percent": 0.0,
+  "packets_sent": 20,
+  "packets_received": 20,
+  "ssid": "CorpHQ_5G"
+}
+
+@latencyTestId = {{createLatencyTest.response.body.id}}
+
+### 16. Latency Tests Stats
+GET {{baseUrl}}/latency-tests/stats
+Authorization: Bearer {{authToken}}
+
+### 17. List Latency Tests
+GET {{baseUrl}}/latency-tests?page=1&page_size=20
+Authorization: Bearer {{authToken}}
+
+### 18. Create Signal Map
+# @name createMap
+POST {{baseUrl}}/signal-maps
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "name": "Engineering Bay Floor 2",
+  "description": "Open office layout",
+  "ssid": "CorpHQ_5G"
+}
+
+@mapId = {{createMap.response.body.id}}
+
+### 19. Add Signal Point
+POST {{baseUrl}}/signal-maps/{{mapId}}/points
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "label": "Lead Desk",
+  "x": 0.35,
+  "y": 0.40,
+  "rssi_dbm": -55
+}
+
+### 20. Get Signal Map Summary
+GET {{baseUrl}}/signal-maps/{{mapId}}/summary
+Authorization: Bearer {{authToken}}
+
+### 21. Upsert Data Usage
+POST {{baseUrl}}/data-usage
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "period_start": "2026-10-25T00:00:00Z",
+  "period_end": "2026-10-25T23:59:59Z",
+  "wifi_rx_bytes": 2500000000,
+  "wifi_tx_bytes": 450000000,
+  "mobile_rx_bytes": 150000000,
+  "mobile_tx_bytes": 25000000
+}
+
+### 22. Get Data Usage Summary (Daily / Weekly / Monthly)
+GET {{baseUrl}}/data-usage/summary?period=daily
+Authorization: Bearer {{authToken}}
+
+### 23. Run Security Scan
+# @name createSecurityScan
+POST {{baseUrl}}/security-scans
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "ssid": "CorpHQ_5G",
+  "bssid": "00:11:22:33:44:55",
+  "security_type": "WPA2",
+  "signal_dbm": -52,
+  "gateway_ip": "192.168.1.1",
+  "local_ip": "192.168.1.100",
+  "devices": [
+    {"ip": "192.168.1.1", "hostname": "router.local"},
+    {"ip": "192.168.1.100", "hostname": "workstation-01"}
+  ]
+}
+
+@securityScanId = {{createSecurityScan.response.body.id}}
+
+### 24. Get Security Scan Detail
+GET {{baseUrl}}/security-scans/{{securityScanId}}
+Authorization: Bearer {{authToken}}
+
+### 25. Run AI Analysis
+# @name runAnalysis
+POST {{baseUrl}}/analysis
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "days": 7
+}
+
+@analysisId = {{runAnalysis.response.body.id}}
+
+### 26. Get Analysis Detail
+GET {{baseUrl}}/analysis/{{analysisId}}
+Authorization: Bearer {{authToken}}
+
+### 27. Generate Report
+# @name createReport
+POST {{baseUrl}}/reports
+Authorization: Bearer {{authToken}}
+Content-Type: {{contentType}}
+
+{
+  "title": "Comprehensive Network Health Report",
+  "start_date": "2026-10-18T00:00:00Z",
+  "end_date": "2026-10-25T23:59:59Z"
+}
+
+@reportId = {{createReport.response.body.id}}
+
+### 28. Export Report PDF
+GET {{baseUrl}}/reports/{{reportId}}/export
+Authorization: Bearer {{authToken}}
+
+### 29. Get Dashboard
+GET {{baseUrl}}/dashboard
+Authorization: Bearer {{authToken}}

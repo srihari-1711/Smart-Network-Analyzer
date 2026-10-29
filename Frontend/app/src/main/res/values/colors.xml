@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Primitive Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Brand Palette (Apple-Level Electric Sapphire & Cyan) -->
+    <color name="primary">#0066FF</color>
+    <color name="primary_variant">#004EC2</color>
+    <color name="primary_container">#EBF3FF</color>
+    <color name="on_primary_container">#0047AB</color>
+    <color name="secondary">#0EA5E9</color>
+    <color name="accent">#00D2FF</color>
+
+    <!-- AI Feature Colors -->
+    <color name="ai_accent">#8B5CF6</color>
+    <color name="ai_accent_bg">#F3E8FF</color>
+    
+    <!-- Backgrounds & Surfaces (Light Mode) -->
+    <color name="bg_light">#F8FAFC</color>
+    <color name="bg_canvas">#F8FAFC</color>
+    <color name="card_surface">#FFFFFF</color>
+    <color name="card_surface_elevated">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+    <color name="card_stroke">#E2E8F0</color>
+    <color name="card_stroke_subtle">#EDF2F7</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#94A3B8</color>
+
+    <!-- Signal & Health Indicators -->
+    <color name="status_strong">#10B981</color>
+    <color name="status_fair">#F59E0B</color>
+    <color name="status_weak">#EF4444</color>
+    <color name="status_info">#0066FF</color>
+    <color name="status_bg_green">#E6F7F0</color>
+    <color name="status_bg_amber">#FEF3C7</color>
+    <color name="status_bg_red">#FEE2E2</color>
+
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="danger">#EF4444</color>
+    <color name="divider">#E2E8F0</color>
+    <color name="text_tertiary">#94A3B8</color>
+    <color name="ai_purple">#8B5CF6</color>
+
+    <!-- Navigation Bar Tokens -->
+    <color name="nav_bg">#F8FAFC</color>
+    <color name="nav_indicator">#E0EDFF</color>
+    <color name="nav_active">#0066FF</color>
+    <color name="nav_inactive">#64748B</color>
+</resources>

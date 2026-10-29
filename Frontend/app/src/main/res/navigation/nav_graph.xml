@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.home.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/nav_wifi"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.wifi.WifiFragment"
+        android:label="Wi-Fi Scanner" />
+
+    <fragment
+        android:id="@+id/nav_tests"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.tests.TestsFragment"
+        android:label="Network Tests" />
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.map.MapFragment"
+        android:label="Signal Maps" />
+
+    <fragment
+        android:id="@+id/nav_more"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.more.MoreFragment"
+        android:label="More Tools" />
+
+    <fragment
+        android:id="@+id/nav_wifi_history"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.wifi.WifiHistoryFragment"
+        android:label="Scan History" />
+
+    <fragment
+        android:id="@+id/nav_speed_stats"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.tests.SpeedStatsFragment"
+        android:label="Speed Statistics" />
+
+    <fragment
+        android:id="@+id/nav_latency_stats"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.tests.LatencyStatsFragment"
+        android:label="Latency Statistics" />
+
+    <fragment
+        android:id="@+id/nav_map_detail"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.map.MapDetailFragment"
+        android:label="Signal Map Details" />
+
+    <fragment
+        android:id="@+id/nav_data_usage"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.more.DataUsageFragment"
+        android:label="Data Usage" />
+
+    <fragment
+        android:id="@+id/nav_security"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.more.SecurityFragment"
+        android:label="Security Audit" />
+
+    <fragment
+        android:id="@+id/nav_analysis"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.more.AnalysisFragment"
+        android:label="Network Analysis" />
+
+    <fragment
+        android:id="@+id/nav_reports"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.more.ReportsFragment"
+        android:label="Reports &amp; PDF" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.simats.smartnetworkanalyzerfrontend.ui.more.ProfileFragment"
+        android:label="Profile &amp; Settings" />
+
+</navigation>

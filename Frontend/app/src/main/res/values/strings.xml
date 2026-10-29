@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Smart Network Analyzer</string>
+    <string name="title_home">Home</string>
+    <string name="title_wifi">Wi-Fi</string>
+    <string name="title_tests">Tests</string>
+    <string name="title_map">Map</string>
+    <string name="title_more">More</string>
+</resources>
