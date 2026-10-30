@@ -83,7 +83,7 @@ export default function DashboardPage() {
             </h3>
             <p className="text-slate-400 text-sm max-w-xl leading-relaxed">
               {data?.latest_analysis
-                ? `Diagnostic completed via ${data.latest_analysis.source === 'groq_ai' ? 'Groq LLM AI' : 'Deterministic Engine'}. ${data.latest_analysis.issues?.length || 0} optimization areas detected.`
+                ? `Diagnostic completed via ${data.latest_analysis.source === 'groq_ai' ? 'Neural AI Core' : 'Deterministic Engine'}. ${data.latest_analysis.issues?.length || 0} optimization areas detected.`
                 : 'Execute your first AI diagnostic to inspect latency, Wi-Fi channel crowding, speed stability, and security posture.'}
             </p>
             <div className="pt-2 flex flex-wrap gap-3 justify-center md:justify-start">

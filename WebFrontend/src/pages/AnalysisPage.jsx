@@ -80,7 +80,7 @@ export default function AnalysisPage() {
             <span>AI Diagnostic Engine</span>
           </h2>
           <p className="text-sm text-slate-400 mt-1">
-            Real-time multi-dimensional network health analysis powered by Groq Llama/DeepSeek inference
+            Real-time multi-dimensional network health analysis powered by neural inference
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export default function AnalysisPage() {
           className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-purple-500 via-sky-500 to-cyan-400 hover:from-purple-400 hover:to-cyan-300 text-slate-950 text-xs font-bold shadow-lg shadow-purple-500/20 transition-all disabled:opacity-50"
         >
           <RotateCw className={`w-4 h-4 ${analyzing ? 'animate-spin' : ''}`} />
-          <span>{analyzing ? 'Consulting Groq LLM...' : 'Run Live AI Diagnostic'}</span>
+          <span>{analyzing ? 'Analyzing Network Telemetry...' : 'Run Live AI Diagnostic'}</span>
         </button>
       </div>
 
@@ -104,7 +104,7 @@ export default function AnalysisPage() {
             <HealthRing score={activeAnalysis?.health_score ?? null} size={180} />
             <div className="mt-4 flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-[11px] font-mono text-purple-300">
               <Bot className="w-3.5 h-3.5" />
-              <span>Engine: {isGroq ? 'Groq LLM AI' : 'Deterministic Rules Engine'}</span>
+              <span>Engine: {isGroq ? 'Neural AI Core' : 'Deterministic Rules Engine'}</span>
             </div>
           </div>
 

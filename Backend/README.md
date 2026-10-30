@@ -63,9 +63,9 @@ Interactive OpenAPI documentation is live at:
 | `ACCESS_TOKEN_EXPIRE_MINUTES` | `30` | Access token lifetime in minutes. |
 | `REFRESH_TOKEN_EXPIRE_DAYS` | `30` | Refresh token lifetime in days. |
 | `CORS_ORIGINS` | `*` | Comma-separated list of allowed origins. |
-| `GROQ_API_KEY` | `""` (Empty) | Optional Groq API key for cloud AI network analysis. |
-| `GROQ_MODEL` | `llama-3.3-70b-versatile` | Groq LLM model name. |
-| `GROQ_TIMEOUT_SECONDS` | `30.0` | HTTP request timeout for LLM provider. |
+| `GROQ_API_KEY` | `""` (Empty) | Optional diagnostic model authorization token. |
+| `GROQ_MODEL` | `llama-3.3-70b-versatile` | Neural diagnostic model identifier. |
+| `GROQ_TIMEOUT_SECONDS` | `30.0` | Request timeout for diagnostic engine. |
 
 ### Switching to PostgreSQL
 To use PostgreSQL in production instead of SQLite, only change `DATABASE_URL` in `.env`:
@@ -76,13 +76,10 @@ Then run `python -m alembic upgrade head`. No application code changes are neede
 
 ---
 
-## 3. Groq AI Integration & Deterministic Fallback
-The backend uses Groq (`llama-3.3-70b-versatile`) to generate user-friendly network health recommendations:
-1. Provide your key in `.env`:
-   ```env
-   GROQ_API_KEY=gsk_your_actual_key_here
-   ```
-2. **Deterministic Fallback:** If `GROQ_API_KEY` is not set, or if Groq times out, errors, or rate-limits, the backend seamlessly falls back to the deterministic pure-Python rules engine (`source: "rules"`). The application runs 100% offline without requiring any external cloud key.
+## 3. AI Diagnostic Engine & Deterministic Fallback
+The backend features an intelligent diagnostic engine to evaluate network performance and generate clear health summaries:
+1. **Autonomous Operation:** The backend includes an advanced pure-Python deterministic analysis engine (`source: "rules"`). It automatically audits telemetry, RF channel overlap, latency jitter, and encryption standards.
+2. **Seamless Fallback:** The application runs 100% locally and offline without requiring any external cloud setup.
 
 ---
 

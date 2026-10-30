@@ -33,7 +33,7 @@ export default function Sidebar() {
       items: [
         { name: 'Data Usage', path: '/data-usage', icon: BarChart3 },
         { name: 'Security Audit', path: '/security', icon: ShieldCheck },
-        { name: 'AI Diagnostics', path: '/analysis', icon: Sparkles, badge: 'Groq' },
+        { name: 'AI Diagnostics', path: '/analysis', icon: Sparkles, badge: 'AI' },
         { name: 'Reports & Export', path: '/reports', icon: FileText },
       ]
     },

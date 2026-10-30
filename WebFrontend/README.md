@@ -41,6 +41,6 @@ Open your browser at:
 - **Synchronized Telemetry**: Live network health score, download/upload throughput benchmarks, and latency checks.
 - **Spectrum & Wi-Fi Scanner**: RF channel crowding distribution across 2.4 GHz and 5 GHz bands.
 - **2D Signal Heatmaps**: Visual floor plan coverage with click-to-measure RSSI sampling.
-- **Groq LLM AI Diagnostics**: Multi-dimensional network health analysis with actionable remediation recommendations.
+- **AI Health Diagnostics**: Multi-dimensional network health analysis with actionable remediation recommendations.
 - **Security Audit**: Encryption analysis, ARP spoofing detection, and rogue AP verification.
 - **Executive Audit Reports**: PDF compilation and export.

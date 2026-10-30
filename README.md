@@ -5,11 +5,11 @@
 [![Vite](https://img.shields.io/badge/Vite-6%2B-646CFF.svg?style=flat&logo=vite&logoColor=white)](https://vitejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4+-38B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![Android](https://img.shields.io/badge/Android-Java%2017%20%7C%20SDK%2035-3DDC84.svg?style=flat&logo=android&logoColor=white)](https://developer.android.com)
-[![Groq LLM](https://img.shields.io/badge/AI%20Engine-Groq%20Cloud-F05A28.svg?style=flat)](https://groq.com)
+[![AI Engine](https://img.shields.io/badge/AI%20Engine-Neural%20Diagnostic-8B5CF6.svg?style=flat)](https://fastapi.tiangolo.com)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
 A unified, full-stack network intelligence platform featuring:
-1. **Python FastAPI Core**: High-throughput REST API with SQLite database, Groq LLM diagnostics, and JWT auth.
+1. **Python FastAPI Core**: High-throughput REST API with SQLite database, AI-powered network diagnostics, and JWT auth.
 2. **Web Dashboard (`WebFrontend`)**: Modern React + Vite + Tailwind CSS web application for your laptop/browser.
 3. **Android Mobile App (`Frontend`)**: Native Android app (Java, ViewBinding, Material 3) with custom launcher logo and edge-to-edge system insets.
 
@@ -30,8 +30,8 @@ A unified, full-stack network intelligence platform featuring:
                                            │
                                            ▼
  ┌────────────────────────┐      ┌───────────────────────────┐      ┌─────────────────────────┐
- │   Laptop Web Browser   │ ───► │   FastAPI Backend Core    │ ◄─── │    Groq Cloud LLM AI    │
- │ (React 18 + Vite Web)  │      │   (Python 3.10+, Port 8000│      │   (DeepSeek/Llama-3.3)  │
+ │   Laptop Web Browser   │ ───► │   FastAPI Backend Core    │ ◄─── │  AI Diagnostic Engine   │
+ │ (React 18 + Vite Web)  │      │   (Python 3.10+, Port 8000│      │ (Neural & Multi-Metric) │
  └────────────────────────┘      └─────────────┬─────────────┘      └─────────────────────────┘
    http://localhost:5173                       │
                                                ▼
@@ -151,7 +151,7 @@ Try this out to see the shared database in action:
 | **Ping & Latency** | ICMP socket ping + jitter | Target Host Picker + RTT chart | Latency & packet loss logger |
 | **Signal Heatmaps** | 2D Room canvas with tap-to-record | Interactive 2D Heatmap visualizer | Coordinate points & coverage store |
 | **Security Audit** | Rogue AP & ARP spoofing scanner | Posture checklist + Risk score | Rule-based & heuristic threat engine |
-| **AI Diagnostics** | Groq LLM integration | Executive synthesis + action plan | Cloud Groq API (`openai/gpt-oss-20b`) |
+| **AI Diagnostics** | Automated AI diagnostic | Executive synthesis + action plan | Neural Network Health Engine |
 | **Audit Reports** | PDF preview & intent share | Instant PDF generation & download | HTML to PDF rendering engine |
 
 ---
@@ -183,7 +183,7 @@ adb shell pm clear com.simats.smartnetworkanalyzerfrontend
 ## 📜 Repository Structure
 ```
 ├── Backend/                 # Python FastAPI REST API & SQLite DB
-│   ├── app/                 # Routers, models, services, Groq AI
+│   ├── app/                 # Routers, models, services, AI diagnostic engine
 │   ├── start_server.bat     # Windows backend launcher
 │   └── start_server.sh      # macOS/Linux backend launcher
 │
