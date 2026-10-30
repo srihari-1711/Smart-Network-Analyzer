@@ -6,6 +6,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.animation.DecelerateInterpolator;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import com.simats.smartnetworkanalyzerfrontend.MainActivity;
 import com.simats.smartnetworkanalyzerfrontend.data.local.TokenManager;
 import com.simats.smartnetworkanalyzerfrontend.databinding.ActivitySplashBinding;
@@ -19,6 +22,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivitySplashBinding binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
 
         // Apple-style logo intro animation (smooth scale up + fade in)
         if (MotionUtils.areAnimationsEnabled(this)) {

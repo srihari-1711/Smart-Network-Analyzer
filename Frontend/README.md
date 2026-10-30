@@ -62,3 +62,4 @@ adb shell am start -n com.simats.smartnetworkanalyzerfrontend/.ui.SplashActivity
 
 ## 🎨 Design System
 For a deep dive into semantic color tokens, typography scales, squircle geometry, and physical spring animations, see [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md).
+

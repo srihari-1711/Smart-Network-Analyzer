@@ -63,3 +63,4 @@ echo "================================================================"
 echo "   SUCCESS! App is running on your phone."
 echo "   Backend port 8000 is mapped via USB reverse proxy."
 echo "================================================================"
+
