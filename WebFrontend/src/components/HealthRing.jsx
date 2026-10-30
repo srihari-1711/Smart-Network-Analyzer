@@ -101,3 +101,4 @@ export default function HealthRing({ score = null, size = 160, strokeWidth = 12 
     </div>
   );
 }
+
